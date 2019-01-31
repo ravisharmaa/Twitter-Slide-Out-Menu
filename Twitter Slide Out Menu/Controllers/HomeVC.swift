@@ -2,30 +2,28 @@
 //  HomeVC.swift
 //  Twitter Slide Out Menu
 //
-//  Created by Joe Langenderfer on 1/30/19.
+//  Created by Joe Langenderfer on 1/31/19.
 //  Copyright © 2019 Joe Langenderfer. All rights reserved.
 //
 
 import UIKit
 
-class HomeVC: UITableViewController {
+class HomeVC: UIViewController {
+    
+    let centerLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Home"
+        label.font = UIFont.boldSystemFont(ofSize: 48)
+        label.textAlignment = .center
+        return label
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        setupNavigationBarItems()
+        setupLabel()
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 10
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = "Slide Out Menu"
-        return cell
-    }
-
+    
     // MARK:- Fileprivate
     
     fileprivate func setupNavigationBarItems() {
@@ -36,7 +34,7 @@ class HomeVC: UITableViewController {
     
     fileprivate func setupCircularNavigationButton() {
         
-        let customView = UIButton(type: .system)
+        let customView = UIButton()
         let imageName = "Profile-Picture"
         customView.setImage(UIImage(named: imageName), for: .normal)
         customView.imageView?.contentMode = .scaleAspectFit
@@ -44,10 +42,29 @@ class HomeVC: UITableViewController {
         customView.clipsToBounds = true
         customView.widthAnchor.constraint(equalToConstant: 30).isActive = true
         customView.heightAnchor.constraint(equalToConstant: 30).isActive = true
-//        customView.addTarget(self, action: #selector(handleOpen), for: .touchUpInside)
+        customView.addTarget(self, action: #selector(handleOpen), for: .touchUpInside)
         
         let barButtonItem = UIBarButtonItem(customView: customView)
         navigationItem.leftBarButtonItem = barButtonItem
+    }
+    
+    @objc func handleOpen() {
+        (UIApplication.shared.keyWindow?.rootViewController as? BaseVC)?.openMenu()
+    }
+    
+    @objc func handleHide() {
+        (UIApplication.shared.keyWindow?.rootViewController as? BaseVC)?.closeMenu()
+    }
+    
+    func hideCircularNavigationButton() {
+        navigationItem.leftBarButtonItem = nil
+    }
+    
+    fileprivate func setupLabel() {
+        view.backgroundColor = .white
+        view.addSubview(centerLabel)
+        centerLabel.frame = view.frame
+        centerLabel.textAlignment = .center
     }
 
 }
