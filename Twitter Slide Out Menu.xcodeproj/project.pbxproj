@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		D8CA6C8A22027B5400CCBECD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CA6C8922027B5400CCBECD /* AppDelegate.swift */; };
-		D8CA6C8C22027B5400CCBECD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CA6C8B22027B5400CCBECD /* ViewController.swift */; };
 		D8CA6C8F22027B5400CCBECD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8CA6C8D22027B5400CCBECD /* Main.storyboard */; };
 		D8CA6C9122027B5500CCBECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8CA6C9022027B5500CCBECD /* Assets.xcassets */; };
 		D8CA6C9422027B5500CCBECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8CA6C9222027B5500CCBECD /* LaunchScreen.storyboard */; };
+		D8CA6C9C2202800800CCBECD /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CA6C9B2202800800CCBECD /* HomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D8CA6C8622027B5400CCBECD /* Twitter Slide Out Menu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twitter Slide Out Menu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8CA6C8922027B5400CCBECD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D8CA6C8B22027B5400CCBECD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D8CA6C8E22027B5400CCBECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8CA6C9022027B5500CCBECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8CA6C9322027B5500CCBECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8CA6C9522027B5500CCBECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8CA6C9B2202800800CCBECD /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				D8CA6C8922027B5400CCBECD /* AppDelegate.swift */,
-				D8CA6C8B22027B5400CCBECD /* ViewController.swift */,
+				D8CA6C9B2202800800CCBECD /* HomeVC.swift */,
 				D8CA6C8D22027B5400CCBECD /* Main.storyboard */,
 				D8CA6C9022027B5500CCBECD /* Assets.xcassets */,
 				D8CA6C9222027B5500CCBECD /* LaunchScreen.storyboard */,
@@ -135,7 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8CA6C8C22027B5400CCBECD /* ViewController.swift in Sources */,
+				D8CA6C9C2202800800CCBECD /* HomeVC.swift in Sources */,
 				D8CA6C8A22027B5400CCBECD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
